@@ -86,10 +86,18 @@ body {
 
 .submenu {
     position: relative;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
 }
 
 .submenu #carrito {
     display: none;
+}
+
+.submenu img {
+    cursor: pointer;
+    width: 30px; 
 }
 
 .submenu:hover #carrito {
@@ -101,7 +109,6 @@ body {
     z-index: 1;
     background-color: #ffffff;
     padding: 20px;
-    min-width: 400px;
     min-width: 400px;
 }
 
