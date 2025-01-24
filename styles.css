@@ -27,6 +27,7 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .menu {
@@ -40,6 +41,7 @@ body {
     min-height: 80px;
     background: #ffffff;
     padding: 0 100px;
+    z-index: 1000;
 }
 
 .menu .logo {
@@ -54,7 +56,6 @@ body {
 .menu .navbar ul li {
     position: relative;
     float: left;
-
 }
 
 .menu .navbar ul li a {
@@ -74,9 +75,34 @@ body {
     display: none;
 }
 
+.menu-icono {
+    width: 25px;
+}
+
 .menu label {
     cursor: pointer;
     display: none;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito {
+    display: none;
+}
+
+.submenu:hover #carrito {
+    display: block;
+    position: absolute;
+    right: 0;
+    backdrop-filter: blur(10px);
+    top: 100%;
+    z-index: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    min-width: 400px;
+    min-width: 400px;
 }
 
 .header-content {
@@ -87,7 +113,6 @@ body {
     font-size: 75px;
     line-height: 80px;
     color: #ffffff;
-    text-transform: uppercase;
     margin-bottom: 35px;
     text-align: center;
     padding: 0 150px;

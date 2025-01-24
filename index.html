@@ -24,15 +24,91 @@
                 </ul>
             </nav>
         </div>
-    
+
+        <div>
+            <ul>
+                <li class="submenu">
+                    <img src="img/car.svg" id="img-carrito" alt="" >
+                    <div id="carrito">
+                        <table id="lista-carrito">
+                            <thead>
+                                <tr>
+                                    <th>Imagen</th>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                    <th>Cantidad</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        <a href="#" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
         <div class="header-content container">
             <h1>Papeleria Creativa</h1>
             <p>
                 ¡Bienvenida! En Papeleria Creativa, transformamos tus ideas en realidad con productos únicos y personalizados. 
             </p>
             <a href="#" class="btn-1">Informacion</a>
+
         </div>
         </header>
 
+        <section class="servicios container" id="lista">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="servicios">
+                            <h3>Calendario</h3>
+                            <p class="precio">$200</p>
+                            <img src="img/calendario.png" alt="">
+                            <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar al carrito</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="servicios">
+                            <h3>Libreta</h3>
+                            <p class="precio">$200</p>
+                            <img src="img/agenda.png" alt="">
+                            <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar al carrito</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="servicios">
+                            <h3>Planificadores</h3>
+                            <p class="precio">$200</p>
+                            <img src="img/planificador.png" alt="">
+                            <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar al carrito</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="servicios">
+                            <h3>Flashcard</h3>
+                            <p class="precio">$200</p>
+                            <img src="img/Flashcard.png" alt="">
+                            <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar al carrito</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="servicios">
+                            <h3>Poloraid</h3>
+                            <p class="precio">$200</p>
+                            <img src="img/poloraid.png" alt="">
+                            <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="script.js"></script>
 </body>
 </html>
