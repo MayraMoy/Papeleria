@@ -1,147 +1,252 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #F8BBD0; /* Rosa claro */
+    --secondary-color: #E1BEE7; /* Lila claro */
+    --accent-color: #D1C4E9; /* Lavanda */
+    --text-color: #424242;
+    --bg-color: #FFFFFF;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: #000;
 }
 
-.container {
-    padding: 0 20px;
+header {
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 }
 
-.header {
-    background-image: linear-gradient(
-        rgba(0,0,0,0.6),
-        rgba(0,0,0,0.6)),
-        url(img/Inicio.png);
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
+nav {
     display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-    min-height: 80px;
-    background: #ffffff;
-    padding: 0 100px;
-    z-index: 1000;
-}
-
-.menu .logo {
-    display: flex;
     align-items: center;
+    padding: 1rem 5%;
+    height: 80px;
 }
 
-.menu .logo img {
-    height: 50px;
+.logo img {
+    height: 60px;
 }
 
-.menu .navbar ul li {
-    position: relative;
-    float: left;
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 40%;
 }
 
-.menu .navbar ul li a {
-    font-size: 18px;
-    padding: 20px;
-    color: #000000;
-    display: block;
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
     font-weight: 600;
-    margin: 0 15px;
+    transition: color 0.3s ease;
 }
 
-.menu .navbar ul li a:hover {
-    color: #c4a3be;
+.nav-links a:hover {
+    color: #cb6ce6;
 }
 
-#menu {
+.burger {
     display: none;
-}
-
-.menu-icono {
-    width: 25px;
-}
-
-.menu label {
     cursor: pointer;
-    display: none;
 }
 
-.submenu {
-    position: relative;
-    margin-left: auto;
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+main {
+    padding-top: 80px;
+}
+
+section {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+#hero {
+    background: linear-gradient(135deg, #ff66c4, #cb6ce6);
+    color: white;
+    min-height: calc(100vh - 80px);
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.submenu #carrito {
-    display: none;
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
 }
 
-.submenu img {
-    cursor: pointer;
-    width: 30px; 
+.hero-content p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
 }
 
-.submenu:hover #carrito {
-    display: block;
-    position: absolute;
-    right: 0;
-    backdrop-filter: blur(10px);
-    top: 100%;
-    z-index: 1;
-    background-color: #ffffff;
-    padding: 20px;
-    min-width: 400px;
+.cta-button {
+    background-color: white;
+    color: #cb6ce6;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Asegúrate de que el botón sea un bloque para que el margen funcione correctamente */
+    margin-top: 2rem; /* <-- AÑADE ESTA LÍNEA */
 }
 
-.header-content {
-    text-align:  center;
+.cta-button:hover {
+    color: white;
+    background-color: #cb6ce6;
 }
 
-.header-content h1 {
-    font-size: 75px;
-    line-height: 80px;
-    color: #ffffff;
-    margin-bottom: 35px;
-    text-align: center;
-    padding: 0 150px;
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #ff66c4;
 }
 
-.header-content p{
-    font-size: 16px;
-    color: #ffffff;
-    padding: 0 150px;
-    margin-bottom:  25px;
-    text-align: left;
+#about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
-.btn-1 {
+.product-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.product-item {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-10px);
+}
+
+.product-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-item h3 {
+    padding: 1.5rem;
+    color: var(--text-color);
+}
+
+#contact {
+    background-color: #f9f9f9;
+}
+
+.social-link {
     display: inline-block;
-    padding: 11px 35px;
-    background-color: #c4a3be;
-    color: #ffffff;
-    text-transform: uppercase;
-    font-size: 18px;
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
 }
 
-.btn-1:hover {
-    background-color: #c4a3be;
+.social-link:hover {
+    transform: scale(1.05);
+}
+
+.social-link i {
+    margin-right: 0.5rem;
+}
+
+/* Estilos para el Botón de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25D366; /* Color oficial de WhatsApp */
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: var(--text-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 5%;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 80px;
+        background-color: var(--bg-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links.nav-active {
+        transform: translateX(0%);
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
 }

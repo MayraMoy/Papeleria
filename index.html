@@ -1,114 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Papelería Creativa 25</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    
-    <header class="header">
-        <div class="menu container">
-            <a href="#" class="logo"><img src="img/logoInicio.png"></a>
-            <input type="checkbox" id="menu" />
-            <label for="menu">
-                <img src="img/menu.png" class="menu-icono" alt="" />
-            </label>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </nav>
-            
-            <div>
-                <ul>
-                    <li class="submenu">
-                        <img src="img/car.svg" id="img-carrito" alt="" >
-                        <div id="carrito">
-                            <table id="lista-carrito">
-                                <thead>
-                                    <tr>
-                                        <th>Imagen</th>
-                                        <th>Nombre</th>
-                                        <th>Precio</th>
-                                        <th>Cantidad</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody></tbody>
-                            </table>
-                            <a href="#" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
-                        </div>
-                    </li>
-                </ul>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/logoInicio.png" alt="Papelería Creativa 25 Logo">
             </div>
-        </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#about">Sobre Nosotras</a></li>
+                <li><a href="#products">Productos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
 
-        <div class="header-content container">
-            <h1>Papeleria Creativa</h1>
-            <p>
-                ¡Bienvenida! En Papeleria Creativa, transformamos tus ideas en realidad con productos únicos y personalizados. 
-            </p>
-            <a href="#" class="btn-1">Informacion</a>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Papelería Creativa</h1>
+                <p>Donde tus ideas cobran vida con un toque de magia y color.</p>
+                <a href="#products" class="cta-button">Ver Productos</a>
+            </div>
+        </section>
 
-        </div>
-        </header>
+        <section id="about">
+            <h2>Sobre Nosotras</h2>
+            <p>En Mi pequeño Arcoíris diseñamos y producimos papelería personalizada para cumpleaños, eventos infantiles y celebraciones especiales..</p>
+        </section>
 
-        <section class="servicios container" id="lista">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                        <div class="servicios">
-                            <h3>Calendario</h3>
-                            <p class="precio">$200</p>
-                            <img src="img/calendario.png" alt="">
-                            <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar al carrito</a>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="servicios">
-                            <h3>Libreta</h3>
-                            <p class="precio">$200</p>
-                            <img src="img/agenda.png" alt="">
-                            <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar al carrito</a>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="servicios">
-                            <h3>Planificadores</h3>
-                            <p class="precio">$200</p>
-                            <img src="img/planificador.png" alt="">
-                            <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar al carrito</a>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="servicios">
-                            <h3>Flashcard</h3>
-                            <p class="precio">$200</p>
-                            <img src="img/Flashcard.png" alt="">
-                            <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar al carrito</a>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="servicios">
-                            <h3>Poloraid</h3>
-                            <p class="precio">$200</p>
-                            <img src="img/poloraid.png" alt="">
-                            <a href="#" class="agregar-carrito btn-2" data-id="1">Agregar al carrito</a>
-                        </div>
-                    </div>
+        <section id="products">
+            <h2>Nuestros Productos</h2>
+            <div class="product-gallery">
+                <div class="product-item">
+                    <img src="img/cuadro.png" alt="Producto 1">
+                    <h3>Cuadros Personalizadas</h3>
+                </div>
+                <div class="product-item">
+                    <img src="img/poloraid.png" alt="Producto 2">
+                    <h3>Fotos estilo poloraid</h3>
+                </div>
+                <div class="product-item">
+                    <img src="img/stikers.png" alt="Producto 3">
+                    <h3>Stickers y Calcomanías</h3>
+                </div>
+                <div class="product-item">
+                    <img src="img/calendario.png" alt="Producto 4">
+                    <h3>Calendarios Personalizados</h3>
                 </div>
             </div>
         </section>
-        <script src="script.js"></script>
+
+        <section id="contact">
+            <h2>Contacto</h2>
+            <p>¿Te gustó lo que viste? ¡Hablemos! Síguenos en Instagram y escríbenos para hacer tu pedido.</p>
+            <a href="https://www.instagram.com/papeleria_creativa25" target="_blank" class="social-link">
+                <i class="fab fa-instagram"></i> @papeleria_creativa25
+            </a>
+            <a href="https://wa.me/112233445566" class="whatsapp-button" target="_blank">
+                <i class="fab fa-whatsapp"></i></a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Papelería Creativa 25. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
+
