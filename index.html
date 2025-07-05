@@ -12,7 +12,7 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="img/logoInicio.png" alt="Papelería Creativa 25 Logo">
+                <img src="img/logoInicio.png" alt="Papelería Creativa Logo">
             </div>
             <ul class="nav-links">
                 <li><a href="#hero">Inicio</a></li>
@@ -39,46 +39,96 @@
 
         <section id="about">
             <h2>Sobre Nosotras</h2>
-            <p>En Mi pequeño Arcoíris diseñamos y producimos papelería personalizada para cumpleaños, eventos infantiles y celebraciones especiales..</p>
+            <p>En Mi pequeño Arcoíris diseñamos y producimos papelería personalizada para cumpleaños, eventos infantiles y celebraciones especiales.</p>
         </section>
 
         <section id="products">
             <h2>Nuestros Productos</h2>
-            <div class="product-gallery">
-                <div class="product-item">
-                    <img src="img/cuadro.png" alt="Producto 1">
-                    <h3>Cuadros Personalizadas</h3>
-                </div>
-                <div class="product-item">
-                    <img src="img/poloraid.png" alt="Producto 2">
-                    <h3>Fotos estilo poloraid</h3>
-                </div>
-                <div class="product-item">
-                    <img src="img/stikers.png" alt="Producto 3">
-                    <h3>Stickers y Calcomanías</h3>
-                </div>
-                <div class="product-item">
-                    <img src="img/calendario.png" alt="Producto 4">
-                    <h3>Calendarios Personalizados</h3>
-                </div>
+            
+            <!-- Filtros -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="cuadros">Cuadros</button>
+                <button class="filter-btn" data-filter="fotos">Fotos</button>
+                <button class="filter-btn" data-filter="stickers">Stickers</button>
+                <button class="filter-btn" data-filter="calendarios">Calendarios</button>
             </div>
-        </section>
 
-        <section id="contact">
-            <h2>Contacto</h2>
-            <p>¿Te gustó lo que viste? ¡Hablemos! Síguenos en Instagram y escríbenos para hacer tu pedido.</p>
-            <a href="https://www.instagram.com/papeleria_creativa25" target="_blank" class="social-link">
-                <i class="fab fa-instagram"></i> @papeleria_creativa25
-            </a>
-            <a href="https://wa.me/112233445566" class="whatsapp-button" target="_blank">
-                <i class="fab fa-whatsapp"></i></a>
-        </section>
-    </main>
+            <div class="product-gallery">
+                <!-- Cuadros Personalizados -->
+                <div class="product-item" data-category="cuadros">
+                    <div class="product-image-container">
+                        <img src="img/cuadro.png" alt="Cuadros Personalizados">
+                        <div class="image-overlay">
+                            <button class="view-btn" onclick="openLightbox('cuadro1')">👁️ Ver Imagen</button>
+                            <button class="details-btn" onclick="showDetails('cuadro1')">ℹ️ Detalles</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Cuadros Personalizados</h3>
+                        <p class="product-description">Hermosos cuadros personalizados con nombres, frases especiales y diseños únicos para decorar cualquier espacio.</p>
+                        <p class="product-price">Desde $12,000</p>
+                        <div class="product-tags">
+                            <span class="tag">Personalizable</span>
+                            <span class="tag">Varios tamaños</span>
+                            <span class="tag">Decoración</span>
+                        </div>
+                    </div>
+                </div>
 
-    <footer>
-        <p>&copy; 2025 Papelería Creativa 25. Todos los derechos reservados.</p>
-    </footer>
+                <!-- Fotos Estilo Polaroid -->
+                <div class="product-item" data-category="fotos">
+                    <div class="product-image-container">
+                        <img src="img/poloraid.png" alt="Fotos Polaroid">
+                        <div class="image-overlay">
+                            <button class="view-btn" onclick="openLightbox('polaroid1')">👁️ Ver Imagen</button>
+                            <button class="details-btn" onclick="showDetails('polaroid1')">ℹ️ Detalles</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Fotos Estilo Polaroid</h3>
+                        <p class="product-description">Fotografías con el encanto vintage de las polaroids, perfectas para crear recuerdos únicos y nostálgicos.</p>
+                        <p class="product-price">Desde $800</p>
+                        <div class="product-tags">
+                            <span class="tag">Vintage</span>
+                            <span class="tag">Recuerdos</span>
+                            <span class="tag">Instantáneas</span>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Stickers -->
+                <div class="product-item" data-category="stickers">
+                    <div class="product-image-container">
+                        <img src="img/stikers.png" alt="Stickers y Calcomanías">
+                        <div class="image-overlay">
+                            <button class="view-btn" onclick="openLightbox('sticker1')">👁️ Ver Imagen</button>
+                            <button class="details-btn" onclick="showDetails('sticker1')">ℹ️ Detalles</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Stickers y Calcomanías</h3>
+                        <p class="product-description">Stickers coloridos y divertidos para decorar cuadernos, laptops, celulares y cualquier superficie.</p>
+                        <p class="product-price">Desde $300</p>
+                        <div class="product-tags">
+                            <span class="tag">Variados</span>
+                            <span class="tag">Resistentes</span>
+                            <span class="tag">Coloridos</span>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <section id="contact">
+                <h2>Contacto</h2>
+                    <p>¿Te gustó lo que viste? ¡Hablemos! Síguenos en Instagram y escríbenos para hacer tu pedido.</p>
+                    <a href="https://www.instagram.com/papeleria_creativa25" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i> @papeleria_creativa25</a>
+                    <a href="https://wa.me/112233445566" class="whatsapp-button" target="_blank">
+                    <i class="fab fa-whatsapp"></i></a>
+            </section>
+            
+            <footer>
+                <p>&copy; 2025 Papelería Creativa. Todos los derechos reservados.</p></footer>
     <script src="script.js"></script>
 </body>
 </html>
