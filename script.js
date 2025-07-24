@@ -57,7 +57,6 @@ const imageMap = {
     otros4: 'img/recuerdos.png',
     otros5: 'img/bolsas.png',
 
-    centro: 'img/centrosmesas.png',
     centro2: 'img/centromesas2.png',
     centro3: 'img/centro.png',
 };
