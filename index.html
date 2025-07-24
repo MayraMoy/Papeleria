@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Papelería personalizada para eventos y cumpleaños. Cuadros, polaroids, stickers, calendarios y más.">
     <title>Mi Pequeño Arcoíris</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="img/logoInicio.png" type="image/png">
 </head>
 <body>
 
@@ -27,6 +29,22 @@
             </div>
         </nav>
     </header>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Imagen ampliada" />
+        </div>
+    </div>
+    <div id="details-modal" class="details-modal">
+        <span class="close" onclick="closeDetails()">&times;</span>
+        <div class="details-content">
+            <h2 id="details-title"></h2>
+            <p id="details-description"></p>
+            <p id="details-price"></p>
+            <div class="details-tags" id="details-tags"></div>
+        </div>
+    </div>
 
     <main>
         <section id="hero">
@@ -52,6 +70,10 @@
                 <button class="filter-btn" data-filter="fotos">Fotos</button>
                 <button class="filter-btn" data-filter="stickers">Stickers</button>
                 <button class="filter-btn" data-filter="calendarios">Calendarios</button>
+                <button class="filter-btn" data-filter="golosineras">Golosineras</button>
+                <button class="filter-btn" data-filter="toppers">Toppers</button>
+                <button class="filter-btn" data-filter="centro-mesas">Centros de Mesa</button>
+                <button class="filter-btn" data-filter="otros">Otros</button>
             </div>
 
             <div class="product-gallery">
@@ -70,7 +92,6 @@
                         <p class="product-price">Desde $12,000</p>
                         <div class="product-tags">
                             <span class="tag">Personalizable</span>
-                            <span class="tag">Varios tamaños</span>
                             <span class="tag">Decoración</span>
                         </div>
                     </div>
@@ -117,6 +138,511 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Calendarios Personalizados -->
+                <div class="product-item" data-category="calendarios">
+                    <div class="product-image-container">
+                        <img src="img/calendario.png" alt="Calendarios Personalizados">
+                        <div class="image-overlay">
+                            <button class="view-btn" onclick="openLightbox('calendario1')">👁️ Ver Imagen</button>
+                            <button class="details-btn" onclick="showDetails('calendario1')">ℹ️ Detalles</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Calendarios Personalizados</h3>
+                        <p class="product-description">Calendarios únicos con tus fotos favoritas, ideales para organizar tu año con estilo.</p>
+                        <p class="product-price">Desde $10,000</p>
+                        <div class="product-tags">
+                            <span class="tag">Organización</span>
+                            <span class="tag">Personalizable</span>
+                            <span class="tag">Decoración</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Golosineras Personalizadas -->
+                <div class="product-item" data-category="golosineras">  
+                    <div class="product-image-container">
+                        <img src="img/golosineramilk.png" alt="Golosineras Personalizadas">
+                        <div class="image-overlay">
+                            <button class="view-btn" onclick="openLightbox('golosinera1')">👁️ Ver Imagen</button>
+                            <button class="details-btn" onclick="showDetails('golosinera1')">ℹ️ Detalles</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Golosineras Personalizadas</h3>
+                        <p class="product-description">Golosineras llenas de dulces y sorpresas, perfectas para fiestas y celebraciones.</p>
+                        <p class="product-price">Desde $15,000</p>
+                        <div class="product-tags">
+                            <span class="tag">Fiestas</span>
+                            <span class="tag">Dulces</span>
+                            <span class="tag">Personalizable</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toppers Personalizados -->
+                <div class="product-item" data-category="toppers">
+                    <div class="product-image-container">
+                        <img src="img/toppers.png" alt="Toppers Personalizados">
+                        <div class="image-overlay">
+                            <button class="view-btn" onclick="openLightbox('topper1')">👁️ Ver Imagen</button>
+                            <button class="details-btn" onclick="showDetails('topper1')">ℹ️ Detalles</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Toppers Personalizados</h3>
+                        <p class="product-description">Toppers únicos para decorar tortas y cupcakes, perfectos para darle un toque especial a tus celebraciones.</p>
+                        <p class="product-price">Desde $2,000</p>
+                        <div class="product-tags">
+                            <span class="tag">Decoración</span>
+                            <span class="tag">Fiestas</span>
+                            <span class="tag">Personalizable</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Centros de Mesa Personalizados -->
+                <div class="product-item" data-category="centro-mesas">
+                    <div class="product-image-container">
+                        <img src="img/centrosmesas.png" alt="Centros de Mesa Personalizados">
+                        <div class="image-overlay">
+                            <button class="view-btn" onclick="openLightbox('centro1')">👁️ Ver Imagen</button>
+                            <button class="details-btn" onclick="showDetails('centro1')">ℹ️ Detalles</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Centros de Mesa Personalizados</h3>
+                        <p class="product-description">Centros de mesa únicos y coloridos para darle vida a tus eventos y celebraciones.</p>
+                        <p class="product-price">Desde $8,000</p>
+                        <div class="product-tags">
+                            <span class="tag">Decoración</span>
+                            <span class="tag">Fiestas</span>
+                            <span class="tag">Personalizable</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Otros -->
+                <div class="product-item" data-category="otros">
+                    <div class="product-image-container">
+                        <img src="img/pulsera.png" alt="Pulseras Personalizadas">
+                        <div class="image-overlay">
+                            <button class="view-btn" onclick="openLightbox('otros1')">👁️ Ver Imagen</button>
+                            <button class="details-btn" onclick="showDetails('otros1')">ℹ️ Detalles</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Pulseras Personalizadas</h3>
+                        <p class="product-description">Pulseras únicas y coloridas, ideales para complementar tu estilo o regalar a tus seres queridos.</p>
+                        <p class="product-price">Desde $5,000</p>
+                        <div class="product-tags">
+                            <span class="tag">Accesorios</span>
+                            <span class="tag">Coloridas</span>
+                            <span class="tag">Personalizable</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stickers -->
+                <div class="product-item" data-category="stickers">
+                    <div class="product-image-container">
+                        <img src="img/stiker.png" alt="Stickers y Calcomanías">
+                        <div class="image-overlay">
+                            <button class="view-btn" onclick="openLightbox('sticker2')">👁️ Ver Imagen</button>
+                            <button class="details-btn" onclick="showDetails('sticker2')">ℹ️ Detalles</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Stickers y Calcomanías</h3>
+                        <p class="product-description">Stickers coloridos y divertidos para decorar cuadernos, laptops, celulares y cualquier superficie.</p>
+                        <p class="product-price">Desde $300</p>
+                        <div class="product-tags">
+                            <span class="tag">Variados</span>
+                            <span class="tag">Resistentes</span>
+                            <span class="tag">Coloridos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cuadros Personalizados -->
+                <div class="product-item" data-category="cuadros">
+                    <div class="product-image-container">
+                        <img src="img/cuadro2.png" alt="Cuadros Personalizados">
+                        <div class="image-overlay">
+                            <button class="view-btn" onclick="openLightbox('cuadro2')">👁️ Ver Imagen</button>
+                            <button class="details-btn" onclick="showDetails('cuadro2')">ℹ️ Detalles</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Cuadros Personalizados</h3>
+                        <p class="product-description">Hermosos cuadros personalizados con nombres, frases especiales y diseños únicos para decorar cualquier espacio.</p>
+                        <p class="product-price">Desde $12,000</p>
+                        <div class="product-tags">
+                            <span class="tag">Personalizable</span>
+                            <span class="tag">Decoración</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Otros -->
+                <div class="product-item" data-category="otros">
+                    <div class="product-image-container">
+                        <img src="img/recuerdos1.png" alt="Pulseras Personalizadas">
+                        <div class="image-overlay">
+                            <button class="view-btn" onclick="openLightbox('otros2')">👁️ Ver Imagen</button>
+                            <button class="details-btn" onclick="showDetails('otros2')">ℹ️ Detalles</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Pulseras Personalizadas</h3>
+                        <p class="product-description">Pulseras únicas y coloridas, ideales para complementar tu estilo o regalar a tus seres queridos.</p>
+                        <p class="product-price">Desde $5,000</p>
+                        <div class="product-tags">
+                            <span class="tag">Accesorios</span>
+                            <span class="tag">Coloridas</span>
+                            <span class="tag">Personalizable</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fotos Estilo Polaroid -->
+                <div class="product-item" data-category="fotos">
+                    <div class="product-image-container">
+                        <img src="img/polaraid1.png" alt="Fotos Polaroid">
+                        <div class="image-overlay">
+                            <button class="view-btn" onclick="openLightbox('polaroid2')">👁️ Ver Imagen</button>
+                            <button class="details-btn" onclick="showDetails('polaroid2')">ℹ️ Detalles</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Fotos Estilo Polaroid</h3>
+                        <p class="product-description">Fotografías con el encanto vintage de las polaroids, perfectas para crear recuerdos únicos y nostálgicos.</p>
+                        <p class="product-price">Desde $800</p>
+                        <div class="product-tags">
+                            <span class="tag">Vintage</span>
+                            <span class="tag">Recuerdos</span>
+                            <span class="tag">Instantáneas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cuadros Personalizados -->
+                <div class="product-item" data-category="cuadros">
+                    <div class="product-image-container">
+                        <img src="img/cuadro3.png" alt="Cuadros Personalizados">
+                        <div class="image-overlay">
+                            <button class="view-btn" onclick="openLightbox('cuadro3')">👁️ Ver Imagen</button>
+                            <button class="details-btn" onclick="showDetails('cuadro3')">ℹ️ Detalles</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Cuadros Personalizados</h3>
+                        <p class="product-description">Hermosos cuadros personalizados con nombres, frases especiales y diseños únicos para decorar cualquier espacio.</p>
+                        <p class="product-price">Desde $12,000</p>
+                        <div class="product-tags">
+                            <span class="tag">Personalizable</span>
+                            <span class="tag">Decoración</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fotos Estilo Polaroid -->
+                <div class="product-item" data-category="fotos">
+                    <div class="product-image-container">
+                        <img src="img/poloraid2.png" alt="Fotos Polaroid">
+                        <div class="image-overlay">
+                            <button class="view-btn" onclick="openLightbox('polaroid3')">👁️ Ver Imagen</button>
+                            <button class="details-btn" onclick="showDetails('polaroid3')">ℹ️ Detalles</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Fotos Estilo Polaroid</h3>
+                        <p class="product-description">Fotografías con el encanto vintage de las polaroids, perfectas para crear recuerdos únicos y nostálgicos.</p>
+                        <p class="product-price">Desde $800</p>
+                        <div class="product-tags">
+                            <span class="tag">Vintage</span>
+                            <span class="tag">Recuerdos</span>
+                            <span class="tag">Instantáneas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stickers -->
+                <div class="product-item" data-category="stickers">
+                    <div class="product-image-container">
+                        <img src="img/stikers2.png" alt="Stickers y Calcomanías">
+                        <div class="image-overlay">
+                            <button class="view-btn" onclick="openLightbox('sticker3')">👁️ Ver Imagen</button>
+                            <button class="details-btn" onclick="showDetails('sticker3')">ℹ️ Detalles</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Stickers y Calcomanías</h3>
+                        <p class="product-description">Stickers coloridos y divertidos para decorar cuadernos, laptops, celulares y cualquier superficie.</p>
+                        <p class="product-price">Desde $300</p>
+                        <div class="product-tags">
+                            <span class="tag">Variados</span>
+                            <span class="tag">Resistentes</span>
+                            <span class="tag">Coloridos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toppers Personalizados -->
+                <div class="product-item" data-category="toppers">
+                    <div class="product-image-container">
+                        <img src="img/toppers2.png" alt="Toppers Personalizados">
+                        <div class="image-overlay">
+                            <button class="view-btn" onclick="openLightbox('topper2')">👁️ Ver Imagen</button>
+                            <button class="details-btn" onclick="showDetails('topper2')">ℹ️ Detalles</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Toppers Personalizados</h3>
+                        <p class="product-description">Toppers únicos para decorar tortas y cupcakes, perfectos para darle un toque especial a tus celebraciones.</p>
+                        <p class="product-price">Desde $2,000</p>
+                        <div class="product-tags">
+                            <span class="tag">Decoración</span>
+                            <span class="tag">Fiestas</span>
+                            <span class="tag">Personalizable</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Golosineras Personalizadas -->
+                <div class="product-item" data-category="golosineras">  
+                    <div class="product-image-container">
+                        <img src="img/cajita2.png" alt="Golosineras Personalizadas">
+                        <div class="image-overlay">
+                            <button class="view-btn" onclick="openLightbox('golosinera2')">👁️ Ver Imagen</button>
+                            <button class="details-btn" onclick="showDetails('golosinera2')">ℹ️ Detalles</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Golosineras Personalizadas</h3>
+                        <p class="product-description">Golosineras llenas de dulces y sorpresas, perfectas para fiestas y celebraciones.</p>
+                        <p class="product-price">Desde $15,000</p>
+                        <div class="product-tags">
+                            <span class="tag">Fiestas</span>
+                            <span class="tag">Dulces</span>
+                            <span class="tag">Personalizable</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stickers -->
+                <div class="product-item" data-category="stickers">
+                    <div class="product-image-container">
+                        <img src="img/stikers3.png" alt="Stickers y Calcomanías">
+                        <div class="image-overlay">
+                            <button class="view-btn" onclick="openLightbox('sticker4')">👁️ Ver Imagen</button>
+                            <button class="details-btn" onclick="showDetails('sticker4')">ℹ️ Detalles</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Stickers y Calcomanías</h3>
+                        <p class="product-description">Stickers coloridos y divertidos para decorar cuadernos, laptops, celulares y cualquier superficie.</p>
+                        <p class="product-price">Desde $300</p>
+                        <div class="product-tags">
+                            <span class="tag">Variados</span>
+                            <span class="tag">Resistentes</span>
+                            <span class="tag">Coloridos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Golosineras Personalizadas -->
+                <div class="product-item" data-category="golosineras">  
+                    <div class="product-image-container">
+                        <img src="img/bolsas1.png" alt="Golosineras Personalizadas">
+                        <div class="image-overlay">
+                            <button class="view-btn" onclick="openLightbox('golosinera1')">👁️ Ver Imagen</button>
+                            <button class="details-btn" onclick="showDetails('golosinera1')">ℹ️ Detalles</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Golosineras Personalizadas</h3>
+                        <p class="product-description">Golosineras llenas de dulces y sorpresas, perfectas para fiestas y celebraciones.</p>
+                        <p class="product-price">Desde $15,000</p>
+                        <div class="product-tags">
+                            <span class="tag">Fiestas</span>
+                            <span class="tag">Dulces</span>
+                            <span class="tag">Personalizable</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stickers -->
+                <div class="product-item" data-category="stickers">
+                    <div class="product-image-container">
+                        <img src="img/nombres.png" alt="Stickers y Calcomanías">
+                        <div class="image-overlay">
+                            <button class="view-btn" onclick="openLightbox('sticker5')">👁️ Ver Imagen</button>
+                            <button class="details-btn" onclick="showDetails('sticker5')">ℹ️ Detalles</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Stickers y Calcomanías</h3>
+                        <p class="product-description">Stickers coloridos y divertidos para decorar cuadernos, laptops, celulares y cualquier superficie.</p>
+                        <p class="product-price">Desde $300</p>
+                        <div class="product-tags">
+                            <span class="tag">Variados</span>
+                            <span class="tag">Resistentes</span>
+                            <span class="tag">Coloridos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toppers Personalizados -->
+                <div class="product-item" data-category="toppers">
+                    <div class="product-image-container">
+                        <img src="img/toppers3.png" alt="Toppers Personalizados">
+                        <div class="image-overlay">
+                            <button class="view-btn" onclick="openLightbox('topper3')">👁️ Ver Imagen</button>
+                            <button class="details-btn" onclick="showDetails('topper3')">ℹ️ Detalles</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Toppers Personalizados</h3>
+                        <p class="product-description">Toppers únicos para decorar tortas y cupcakes, perfectos para darle un toque especial a tus celebraciones.</p>
+                        <p class="product-price">Desde $2,000</p>
+                        <div class="product-tags">
+                            <span class="tag">Decoración</span>
+                            <span class="tag">Fiestas</span>
+                            <span class="tag">Personalizable</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Otros -->
+                <div class="product-item" data-category="otros">
+                    <div class="product-image-container">
+                        <img src="img/recuerdos2.png" alt="Pulseras Personalizadas">
+                        <div class="image-overlay">
+                            <button class="view-btn" onclick="openLightbox('otros3')">👁️ Ver Imagen</button>
+                            <button class="details-btn" onclick="showDetails('otros3')">ℹ️ Detalles</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Pulseras Personalizadas</h3>
+                        <p class="product-description">Pulseras únicas y coloridas, ideales para complementar tu estilo o regalar a tus seres queridos.</p>
+                        <p class="product-price">Desde $5,000</p>
+                        <div class="product-tags">
+                            <span class="tag">Accesorios</span>
+                            <span class="tag">Coloridas</span>
+                            <span class="tag">Personalizable</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Otros -->
+                <div class="product-item" data-category="otros">
+                    <div class="product-image-container">
+                        <img src="img/recuerdos.png" alt="Pulseras Personalizadas">
+                        <div class="image-overlay">
+                            <button class="view-btn" onclick="openLightbox('otros4')">👁️ Ver Imagen</button>
+                            <button class="details-btn" onclick="showDetails('otros4')">ℹ️ Detalles</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Pulseras Personalizadas</h3>
+                        <p class="product-description">Pulseras únicas y coloridas, ideales para complementar tu estilo o regalar a tus seres queridos.</p>
+                        <p class="product-price">Desde $5,000</p>
+                        <div class="product-tags">
+                            <span class="tag">Accesorios</span>
+                            <span class="tag">Coloridas</span>
+                            <span class="tag">Personalizable</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Centros de Mesa Personalizados -->
+                <div class="product-item" data-category="centro-mesas">
+                    <div class="product-image-container">
+                        <img src="img/centromesas2.png" alt="Centros de Mesa Personalizados">
+                        <div class="image-overlay">
+                            <button class="view-btn" onclick="openLightbox('centro2')">👁️ Ver Imagen</button>
+                            <button class="details-btn" onclick="showDetails('centro2')">ℹ️ Detalles</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Centros de Mesa Personalizados</h3>
+                        <p class="product-description">Centros de mesa únicos y coloridos para darle vida a tus eventos y celebraciones.</p>
+                        <p class="product-price">Desde $8,000</p>
+                        <div class="product-tags">
+                            <span class="tag">Decoración</span>
+                            <span class="tag">Fiestas</span>
+                            <span class="tag">Personalizable</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Centros de Mesa Personalizados -->
+                <div class="product-item" data-category="centro-mesas">
+                    <div class="product-image-container">
+                        <img src="img/centro.png" alt="Centros de Mesa Personalizados">
+                        <div class="image-overlay">
+                            <button class="view-btn" onclick="openLightbox('centro3')">👁️ Ver Imagen</button>
+                            <button class="details-btn" onclick="showDetails('centro3')">ℹ️ Detalles</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Centros de Mesa Personalizados</h3>
+                        <p class="product-description">Centros de mesa únicos y coloridos para darle vida a tus eventos y celebraciones.</p>
+                        <p class="product-price">Desde $8,000</p>
+                        <div class="product-tags">
+                            <span class="tag">Decoración</span>
+                            <span class="tag">Fiestas</span>
+                            <span class="tag">Personalizable</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stickers -->
+                <div class="product-item" data-category="stickers">
+                    <div class="product-image-container">
+                        <img src="img/stikers1.png" alt="Stickers y Calcomanías">
+                        <div class="image-overlay">
+                            <button class="view-btn" onclick="openLightbox('sticker6')">👁️ Ver Imagen</button>
+                            <button class="details-btn" onclick="showDetails('sticker6')">ℹ️ Detalles</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Stickers y Calcomanías</h3>
+                        <p class="product-description">Stickers coloridos y divertidos para decorar cuadernos, laptops, celulares y cualquier superficie.</p>
+                        <p class="product-price">Desde $300</p>
+                        <div class="product-tags">
+                            <span class="tag">Variados</span>
+                            <span class="tag">Resistentes</span>
+                            <span class="tag">Coloridos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Otros -->
+                <div class="product-item" data-category="otros">
+                    <div class="product-image-container">
+                        <img src="img/bolsas.png" alt="Pulseras Personalizadas">
+                        <div class="image-overlay">
+                            <button class="view-btn" onclick="openLightbox('otros5')">👁️ Ver Imagen</button>
+                            <button class="details-btn" onclick="showDetails('otros5')">ℹ️ Detalles</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Pulseras Personalizadas</h3>
+                        <p class="product-description">Pulseras únicas y coloridas, ideales para complementar tu estilo o regalar a tus seres queridos.</p>
+                        <p class="product-price">Desde $5,000</p>
+                        <div class="product-tags">
+                            <span class="tag">Accesorios</span>
+                            <span class="tag">Coloridas</span>
+                            <span class="tag">Personalizable</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
             </main>
             <section id="contact">
                 <h2>Contacto</h2>
