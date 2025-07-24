@@ -49,7 +49,10 @@ const imageMap = {
     topper3: 'img/toppers3.png',
 
     calendario1: 'img/calendario.png',
-    golosineras1: 'img/golosineramilk.png',
+
+    golosinera1: 'img/golosineramilk.png',
+    golosinera2: 'img/cajita2.png',
+    golosinera3: 'img/bolsas1.png',
 
     otros1: 'img/pulsera.png',
     otros2: 'img/recuerdos1.png',
@@ -80,6 +83,13 @@ document.addEventListener('keydown', function (event) {
 document.getElementById('lightbox').addEventListener('click', function (e) {
     if (e.target.id === 'lightbox') {
         closeLightbox();
+    }
+});
+
+// Cerrar modal de detalles al hacer clic fuera del contenido
+document.getElementById('details-modal').addEventListener('click', function (e) {
+    if (e.target.id === 'details-modal') {
+        closeDetails();
     }
 });
 
@@ -254,6 +264,24 @@ function showDetails(id) {
             price: 'Desde $3,000',
             tags: ['Eventos', 'Decoración', 'Personalizable']
     },
+        golosinera1: {
+            title: 'Golosineras Personalizadas',
+            description: 'Golosineras únicas y personalizadas para eventos, ideales para regalar dulces y sorpresas a tus invitados.',
+            price: 'Desde $2,500',
+            tags: ['Eventos', 'Dulces', 'Personalizable']
+    },
+        golosinera2: {
+            title: 'Golosineras Personalizadas',
+            description: 'Golosineras únicas y personalizadas para eventos, ideales para regalar dulces y sorpresas a tus invitados.',
+            price: 'Desde $2,500',
+            tags: ['Eventos', 'Dulces', 'Personalizable']
+    },
+        golosinera3: {
+            title: 'Golosineras Personalizadas',
+            description: 'Golosineras únicas y personalizadas para eventos, ideales para regalar dulces y sorpresas a tus invitados.',
+            price: 'Desde $2,500',
+            tags: ['Eventos', 'Dulces', 'Personalizable']
+    }
 };
 
 const data = detailsMap[id];
@@ -306,6 +334,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         });
     });
+    });
+});
+
+// Cierra el menú al hacer clic en un link (móvil)
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('nav-active');
+        document.querySelector('.burger').classList.remove('toggle');
     });
 });
 
