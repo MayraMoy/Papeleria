@@ -395,3 +395,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
+window.addEventListener("orientationchange", function () {
+    const menu = document.querySelector(".menu");
+    menu.classList.remove("active");
+});
