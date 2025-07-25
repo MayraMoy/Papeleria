@@ -396,6 +396,11 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 });
 
 window.addEventListener("orientationchange", function () {
-    const menu = document.querySelector(".menu");
-    menu.classList.remove("active");
+    const nav = document.querySelector(".nav-links");
+    const burger = document.querySelector(".burger");
+
+    if (nav.classList.contains("nav-active")) {
+        nav.classList.remove("nav-active");
+        burger.classList.remove("toggle");
+    }
 });
