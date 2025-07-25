@@ -29,39 +29,48 @@ function openLightbox(id) {
 
   // Asocia cada ID con su imagen
 const imageMap = {
-    cuadro1: 'img/cuadro.png',
-    cuadro2: 'img/cuadro2.png',
-    cuadro3: 'img/cuadro3.png',
+    cuadro1: 'img/cuadros/cuadro1.png',
+    cuadro2: 'img/cuadros/cuadro2.png',
+    cuadro3: 'img/cuadros/cuadro3.png',
 
-    polaroid1: 'img/poloraid.png',
-    polaroid2: 'img/polaraid1.png',
-    polaroid3: 'img/poloraid2.png',
+    polaroid1: 'img/fotos/polaraid.png',
+    polaroid2: 'img/fotos/polaraid1.png',
+    polaroid3: 'img/fotos/poloraid2.png',
 
-    sticker1: 'img/stikers.png',
-    sticker2: 'img/stiker.png',
-    sticker3: 'img/stikers2.png',
-    sticker4: 'img/stikers3.png',
-    sticker5: 'img/nombres.png',
-    sticker6: 'img/stikers1.png',
+    sticker1: 'img/stickers/stikers0.png',
+    sticker2: 'img/stickers/stiker.png',
+    sticker3: 'img/stickers/stikers2.png',
+    sticker4: 'img/stickers/stikers3.png',
+    sticker5: 'img/stickers/stikers4.png',
+    sticker6: 'img/stickers/stikers1.png',
 
-    topper1: 'img/toppers.png',
-    topper2: 'img/toppers2.png',
-    topper3: 'img/toppers3.png',
+    topper1: 'img/toppers/toppers.png',
+    topper2: 'img/toppers/toppers2.png',
+    topper3: 'img/toppers/toppers3.png',
+    topper4: 'img/toppers/toppers4.jpg',
 
-    calendario1: 'img/calendario.png',
+    calendario1: 'img/calendarios/calendario.png',
 
-    golosinera1: 'img/golosineramilk.png',
-    golosinera2: 'img/cajita2.png',
-    golosinera3: 'img/bolsas1.png',
+    golosinera1: 'img/golosineras/golosineramilk.png',
+    golosinera2: 'img/golosineras/cajita2.png',
+    golosinera3: 'img/golosineras/bolsas1.png',
+    golosinera4: 'img/golosineras/golosinera.jpg',
 
-    otros1: 'img/pulsera.png',
-    otros2: 'img/recuerdos1.png',
-    otros3: 'img/recuerdos2.png',
-    otros4: 'img/recuerdos.png',
-    otros5: 'img/bolsas.png',
+    otros1: 'img/otros/pulsera.png',
+    otros2: 'img/otros/recuerdos1.png',
+    otros3: 'img/otros/recuerdos2.png',
+    otros4: 'img/otros/recuerdos.png',
+    otros5: 'img/otros/bolsas.png',
+    otros6: 'img/otros/otros.jpg',
+    otros0: 'img/otros/otros1.jpg',
+    otros7: 'img/otros/otros2.jpg',
+    otros8: 'img/otros/souvenirs1.jpg',
+    otros9: 'img/otros/souvenirs.jpg',
 
-    centro2: 'img/centromesas2.png',
-    centro3: 'img/centro.png',
+    centro1: 'img/centro-mesa/centromesa4.jpg',
+    centro2: 'img/centro-mesa/centromesas2.png',
+    centro3: 'img/centro-mesa/centro.png',
+    centro4: 'img/centro-mesa/centromesa3.jpg',
 };
 
 lightboxImg.src = imageMap[id];
@@ -121,6 +130,7 @@ document.head.appendChild(style);
 function showDetails(id) {
     const modal = document.getElementById('details-modal');
     const title = document.getElementById('details-title');
+    const subtitle = document.getElementById('details-subtitle');
     const description = document.getElementById('details-description');
     const price = document.getElementById('details-price');
     const tags = document.getElementById('details-tags');
@@ -128,158 +138,197 @@ function showDetails(id) {
     const detailsMap = {
         cuadro1: {
             title: 'Cuadros Personalizados',
-            description: 'Hermosos cuadros personalizados con nombres, frases especiales y diseños únicos para decorar cualquier espacio.',
-            price: 'Desde $12,000',
-            tags: ['Personalizable', 'Varios tamaños', 'Decoración']
+            subtitle: 'Cuadros Personalizados 13x18 cm.',
+            description: 'Impresos en papel fotográfico de alta calidad, podés agregar nombres, frases o fechas especiales. Vienen listos para apoyar, ideales para decorar escritorios, estanterías o mesas. Disponibles en color blanco o negro, combinan con cualquier estilo y ocasión.',
+            tags: ['Personalizable', 'Decoración']
     },
         cuadro2: {
             title: 'Cuadros Personalizados',
-            description: 'Hermosos cuadros personalizados con nombres, frases especiales y diseños únicos para decorar cualquier espacio.',
-            price: 'Desde $12,000',
-            tags: ['Personalizable', 'Varios tamaños', 'Decoración']
+            subtitle: 'Cuadros Personalizados 13x18 cm.',
+            description: 'Impresos en papel fotográfico de alta calidad, podés agregar nombres, frases o fechas especiales. Vienen listos para apoyar, ideales para decorar escritorios, estanterías o mesas. Disponibles en color blanco o negro, combinan con cualquier estilo y ocasión.',
+            tags: ['Personalizable', 'Decoración']
     },
         cuadro3: {
             title: 'Cuadros Personalizados',
-            description: 'Hermosos cuadros personalizados con nombres, frases especiales y diseños únicos para decorar cualquier espacio.',
-            price: 'Desde $12,000',
-            tags: ['Personalizable', 'Varios tamaños', 'Decoración']
+            subtitle: 'Cuadros Personalizados 13x18 cm.',
+            description: 'Impresos en papel fotográfico de alta calidad, podés agregar nombres, frases o fechas especiales. Vienen listos para apoyar, ideales para decorar escritorios, estanterías o mesas. Disponibles en color blanco o negro, combinan con cualquier estilo y ocasión.',
+            tags: ['Personalizable', 'Decoración']
     },
         polaroid1: {
             title: 'Fotos Estilo Polaroid',
-            description: 'Fotografías con el encanto vintage de las polaroids, perfectas para crear recuerdos únicos y nostálgicos.',
-            price: 'Desde $800',
-            tags: ['Vintage', 'Recuerdos', 'Instantáneas']
+            subtitle: 'Fotos Estilo Polaroid 8x10 cm',
+            description: 'Dale vida a tus recuerdos con nuestras fotos tipo Polaroid de 8x10 cm. Están impresas en papel fotográfico de alta calidad y podés personalizarlas con frases, nombres o fechas especiales. Son ideales para decorar, regalar o crear álbumes llenos de momentos únicos',
+            price: 'Disponibles en packs:',
+            tags: ['Pack x12 ud: $7500', 'Pack x18 ud: $12.000', 'Pack x24 ud: $15.000', 'Pack x32 ud: $18.000']
     },
         polaroid2: {
             title: 'Fotos Estilo Polaroid',
-            description: 'Fotografías con el encanto vintage de las polaroids, perfectas para crear recuerdos únicos y nostálgicos.',
-            price: 'Desde $800',
-            tags: ['Vintage', 'Recuerdos', 'Instantáneas']
+            subtitle: 'Fotos Estilo Polaroid 8x10 cm',
+            description: 'Dale vida a tus recuerdos con nuestras fotos tipo Polaroid de 8x10 cm. Están impresas en papel fotográfico de alta calidad y podés personalizarlas con frases, nombres o fechas especiales. Son ideales para decorar, regalar o crear álbumes llenos de momentos únicos',
+            price: 'Disponibles en packs:',
+            tags: ['Pack x12 ud: $7500', 'Pack x18 ud: $12.000', 'Pack x24 ud: $15.000', 'Pack x32 ud: $18.000']
     },
         polaroid3: {
             title: 'Fotos Estilo Polaroid',
-            description: 'Fotografías con el encanto vintage de las polaroids, perfectas para crear recuerdos únicos y nostálgicos.',
-            price: 'Desde $800',
-            tags: ['Vintage', 'Recuerdos', 'Instantáneas']
+            subtitle: 'Fotos Estilo Polaroid 8x10 cm',
+            description: 'Dale vida a tus recuerdos con nuestras fotos tipo Polaroid de 8x10 cm. Están impresas en papel fotográfico de alta calidad y podés personalizarlas con frases, nombres o fechas especiales. Son ideales para decorar, regalar o crear álbumes llenos de momentos únicos',
+            price: 'Disponibles en packs:',
+            tags: ['Pack x12 ud: $7500', 'Pack x18 ud: $12.000', 'Pack x24 ud: $15.000', 'Pack x32 ud: $18.000']
     },
         sticker1: {
             title: 'Stickers y Calcomanías',
-            description: 'Stickers coloridos y divertidos para decorar cuadernos, laptops, celulares y cualquier superficie.',
-            price: 'Desde $300',
+            subtitle: 'Papel fotográfico brillante adhesivo',
+            description: 'papel fotográfico brillante adhesivo. Ideales para decorar bolsitas, souvenirs, cajitas, vasos y mucho más. Resistentes, con colores vibrantes y terminación brillante, se adaptan a cualquier temática. Podés elegir nombres, frases, personajes y diseños únicos para hacer de cada cumpleaños un momento inolvidable.',
             tags: ['Variados', 'Resistentes', 'Coloridos']
     },
         sticker2: {
             title: 'Stickers y Calcomanías',
-            description: 'Stickers coloridos y divertidos para decorar cuadernos, laptops, celulares y cualquier superficie.',
-            price: 'Desde $300',
+            subtitle: 'Papel fotográfico brillante adhesivo',
+            description: 'papel fotográfico brillante adhesivo. Ideales para decorar bolsitas, souvenirs, cajitas, vasos y mucho más. Resistentes, con colores vibrantes y terminación brillante, se adaptan a cualquier temática. Podés elegir nombres, frases, personajes y diseños únicos para hacer de cada cumpleaños un momento inolvidable.',
             tags: ['Variados', 'Resistentes', 'Coloridos']
     },
         sticker3: {
             title: 'Stickers y Calcomanías',
-            description: 'Stickers coloridos y divertidos para decorar cuadernos, laptops, celulares y cualquier superficie.',
-            price: 'Desde $300',
+            subtitle: 'Papel fotográfico brillante adhesivo',
+            description: 'papel fotográfico brillante adhesivo. Ideales para decorar bolsitas, souvenirs, cajitas, vasos y mucho más. Resistentes, con colores vibrantes y terminación brillante, se adaptan a cualquier temática. Podés elegir nombres, frases, personajes y diseños únicos para hacer de cada cumpleaños un momento inolvidable.',
             tags: ['Variados', 'Resistentes', 'Coloridos']
     },
         sticker4: {
             title: 'Stickers y Calcomanías',
-            description: 'Stickers coloridos y divertidos para decorar cuadernos, laptops, celulares y cualquier superficie.',
-            price: 'Desde $300',
+            subtitle: 'Papel fotográfico brillante adhesivo',
+            description: 'papel fotográfico brillante adhesivo. Ideales para decorar bolsitas, souvenirs, cajitas, vasos y mucho más. Resistentes, con colores vibrantes y terminación brillante, se adaptan a cualquier temática. Podés elegir nombres, frases, personajes y diseños únicos para hacer de cada cumpleaños un momento inolvidable.',
             tags: ['Variados', 'Resistentes', 'Coloridos']
     },
         sticker5: {
             title: 'Stickers y Calcomanías',
-            description: 'Stickers coloridos y divertidos para decorar cuadernos, laptops, celulares y cualquier superficie.',
-            price: 'Desde $300',
+            subtitle: 'Papel fotográfico brillante adhesivo',
+            description: 'papel fotográfico brillante adhesivo. Ideales para decorar bolsitas, souvenirs, cajitas, vasos y mucho más. Resistentes, con colores vibrantes y terminación brillante, se adaptan a cualquier temática. Podés elegir nombres, frases, personajes y diseños únicos para hacer de cada cumpleaños un momento inolvidable.',
             tags: ['Variados', 'Resistentes', 'Coloridos']
     },
         sticker6: {
             title: 'Stickers y Calcomanías',
-            description: 'Stickers coloridos y divertidos para decorar cuadernos, laptops, celulares y cualquier superficie.',
-            price: 'Desde $300',
+            subtitle: 'Papel fotográfico brillante adhesivo',
+            description: 'papel fotográfico brillante adhesivo. Ideales para decorar bolsitas, souvenirs, cajitas, vasos y mucho más. Resistentes, con colores vibrantes y terminación brillante, se adaptan a cualquier temática. Podés elegir nombres, frases, personajes y diseños únicos para hacer de cada cumpleaños un momento inolvidable.',
             tags: ['Variados', 'Resistentes', 'Coloridos']
+    },
+        calendario1: {
+            title: 'Calendarios Personalizados',
+            subtitle: 'Papel fotográfico brillante',
+            description: 'Llevá tu marca a donde vayan tus clientes con nuestros calendarios personalizados imantados. Están impresos en papel fotográfico brillante de alta calidad, lo que garantiza colores intensos y una presentación profesional. Son ideales para regalar como detalle de fin de año o como promoción de tu negocio. Disponibles en varios tamaños, se adhieren fácilmente a heladeras, escritorios y superficies metálicas. ¡Una forma práctica y visual de estar presente todo el año!',
+            tags: ['Personalizable', 'Decoración', 'Regalo']
     },
         topper1: {
             title: 'Toppers Personalizados',
             description: 'Toppers únicos para decorar tortas y cupcakes, perfectos para darle un toque especial a tus celebraciones.',
-            price: 'Desde $2,000',
             tags: ['Decoración', 'Fiestas', 'Personalizable']
     },
         topper2: {
             title: 'Toppers Personalizados',
             description: 'Toppers únicos para decorar tortas y cupcakes, perfectos para darle un toque especial a tus celebraciones.',
-            price: 'Desde $2,000',
             tags: ['Decoración', 'Fiestas', 'Personalizable']
     },
         topper3: {
             title: 'Toppers Personalizados',
             description: 'Toppers únicos para decorar tortas y cupcakes, perfectos para darle un toque especial a tus celebraciones.',
-            price: 'Desde $2,000',
             tags: ['Decoración', 'Fiestas', 'Personalizable']
+    },
+        topper4: {
+            title: 'Toppers Personalizados',
+            description: 'Toppers únicos para decorar tortas y cupcakes, perfectos para darle un toque especial a tus celebraciones.',
+            tags: ['Decoración', 'Fiestas', 'Personalizable']
+    },
+        otros0: {
+            title: 'Souvenirs Personalizadas',
+            description: 'Souvenirs únicos y personalizadas con nombres, frases o diseños especiales, ideales para regalar o usar en eventos.',
+            tags: ['Personalizable', 'Regalo', 'Eventos']
     },
         otros1: {
             title: 'Pulseras Personalizadas',
             description: 'Pulseras únicas y personalizadas con nombres, frases o diseños especiales, ideales para regalar o usar en eventos.',
-            price: 'Desde $1,500',
             tags: ['Personalizable', 'Regalo', 'Eventos']
     },
         otros2: {
             title: 'Recuerdos Personalizados',
             description: 'Recuerdos únicos para eventos, como bautizos, comuniones o cumpleaños, personalizados con el nombre y fecha del evento.',
-            price: 'Desde $1,200',
             tags: ['Eventos', 'Personalizable', 'Recuerdos']
     },
         otros3: {
-            title: 'Recuerdos Personalizados',
+            title: 'Tarjetas Personalizadas',
             description: 'Recuerdos únicos para eventos, como bautizos, comuniones o cumpleaños, personalizados con el nombre y fecha del evento.',
-            price: 'Desde $1,200',
             tags: ['Eventos', 'Personalizable', 'Recuerdos']
     },
         otros4: {
             title: 'Recuerdos Personalizados',
             description: 'Recuerdos únicos para eventos, como bautizos, comuniones o cumpleaños, personalizados con el nombre y fecha del evento.',
-            price: 'Desde $1,200',
             tags: ['Eventos', 'Personalizable', 'Recuerdos']
     },
         otros5: {
             title: 'Recuerdos Personalizados',
             description: 'Recuerdos únicos para eventos, como bautizos, comuniones o cumpleaños, personalizados con el nombre y fecha del evento.',
-            price: 'Desde $1,200',
             tags: ['Eventos', 'Personalizable', 'Recuerdos']
     },
-        centro: {
+        otros6: {
+            title: 'Souvenirs Personalizadas',
+            description: 'Souvenirs únicos y personalizadas con nombres, frases o diseños especiales, ideales para regalar o usar en eventos.',
+            tags: ['Personalizable', 'Regalo', 'Eventos']
+    },
+        otros7: {
+            title: 'Souvenirs Personalizadas',
+            description: 'Souvenirs únicos y personalizadas con nombres, frases o diseños especiales, ideales para regalar o usar en eventos.',
+            tags: ['Personalizable', 'Regalo', 'Eventos']
+    },
+        otros8: {
+            title: 'Souvenirs Personalizadas',
+            description: 'Souvenirs únicos y personalizadas con nombres, frases o diseños especiales, ideales para regalar o usar en eventos.',
+            tags: ['Personalizable', 'Regalo', 'Eventos']
+    },
+        otros9: {
+            title: 'Souvenirs Personalizadas',
+            description: 'Souvenirs únicos y personalizadas con nombres, frases o diseños especiales, ideales para regalar o usar en eventos.',
+            tags: ['Personalizable', 'Regalo', 'Eventos']
+    },
+        centro1: {
             title: 'Centros de Mesa Personalizados',
             description: 'Centros de mesa únicos y personalizados para decorar tus eventos, con diseños que se adaptan a cualquier temática.',
-            price: 'Desde $3,000',
             tags: ['Eventos', 'Decoración', 'Personalizable']
     },
         centro2: {
             title: 'Centros de Mesa Personalizados',
             description: 'Centros de mesa únicos y personalizados para decorar tus eventos, con diseños que se adaptan a cualquier temática.',
-            price: 'Desde $3,000',
             tags: ['Eventos', 'Decoración', 'Personalizable']
     },
         centro3: {
             title: 'Centros de Mesa Personalizados',
             description: 'Centros de mesa únicos y personalizados para decorar tus eventos, con diseños que se adaptan a cualquier temática.',
-            price: 'Desde $3,000',
+            tags: ['Eventos', 'Decoración', 'Personalizable']
+    },
+        centro4: {
+            title: 'Centros de Mesa Personalizados',
+            description: 'Centros de mesa únicos y personalizados para decorar tus eventos, con diseños que se adaptan a cualquier temática.',
             tags: ['Eventos', 'Decoración', 'Personalizable']
     },
         golosinera1: {
             title: 'Golosineras Personalizadas',
-            description: 'Golosineras únicas y personalizadas para eventos, ideales para regalar dulces y sorpresas a tus invitados.',
-            price: 'Desde $2,500',
+            subtitle: 'Golosinera tipo Milk – Papel fotográfico brillante',
+            description: 'Decorá tu fiesta con nuestras cajitas tipo milk, ideales para golosinas, souvenirs o regalitos. Están impresas en papel fotográfico brillante, lo que les da un acabado de alta calidad y colores súper vibrantes. Podés personalizarlas con el nombre del homenajeado, edad, fecha y temática que elijas.',
+            price: '🎉 Pack de 15 unidades por $45.000',
             tags: ['Eventos', 'Dulces', 'Personalizable']
     },
         golosinera2: {
             title: 'Golosineras Personalizadas',
+            subtitle: 'Golosinera tipo Milk – Papel fotográfico brillante',
             description: 'Golosineras únicas y personalizadas para eventos, ideales para regalar dulces y sorpresas a tus invitados.',
-            price: 'Desde $2,500',
+            price: '🎉 Pack de 15 unidades por $45.000',
             tags: ['Eventos', 'Dulces', 'Personalizable']
     },
         golosinera3: {
             title: 'Golosineras Personalizadas',
             description: 'Golosineras únicas y personalizadas para eventos, ideales para regalar dulces y sorpresas a tus invitados.',
-            price: 'Desde $2,500',
+            tags: ['Eventos', 'Dulces', 'Personalizable']
+    },
+        golosinera4: {
+            title: 'Golosineras Personalizadas',
+            description: 'Golosineras únicas y personalizadas para eventos, ideales para regalar dulces y sorpresas a tus invitados.',
             tags: ['Eventos', 'Dulces', 'Personalizable']
     }
 };
@@ -287,6 +336,7 @@ function showDetails(id) {
 const data = detailsMap[id];
 
     title.textContent = data.title;
+    subtitle.textContent = data.subtitle || ''; // Si no hay subtítulo, se deja vacío
     description.textContent = data.description;
     price.textContent = data.price;
 

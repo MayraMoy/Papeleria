@@ -399,10 +399,11 @@ h2 {
     width: 100%;
     color: #333;
     position: relative;
-    text-align: center;
+    text-align: justify;
 }
 
 .details-content h2 {
+    text-align: center;
     color: #cb6ce6;
     margin-bottom: 1rem;
 }
@@ -568,10 +569,11 @@ footer {
         max-width: 90%;
         padding: 1.5rem;
         font-size: 0.95rem;
-        text-align: center;
+        text-align: justify;
     }
 
     .details-content h2 {
+        text-align: center;
         font-size: 1.4rem;
     }
 
