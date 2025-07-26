@@ -1,3 +1,4 @@
+// Función para el menú de navegación móvil
 const navSlide = () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
@@ -23,6 +24,7 @@ const navSlide = () => {
 
 navSlide();
 
+// Funcion para mostrar de cada imagen 
 function openLightbox(id) {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
@@ -73,10 +75,12 @@ const imageMap = {
     centro4: 'img/centro-mesa/centromesa3.jpg',
 };
 
+// Asigna la imagen correspondiente al ID
 lightboxImg.src = imageMap[id];
 lightbox.style.display = 'flex';
 }
 
+// Cerrar Lightbox
 function closeLightbox() {
     document.getElementById('lightbox').style.display = 'none';
 }
@@ -127,6 +131,7 @@ style.innerHTML = `
 `;
 document.head.appendChild(style);
 
+// Función para mostrar detalles del producto en un modal
 function showDetails(id) {
     const modal = document.getElementById('details-modal');
     const title = document.getElementById('details-title');
@@ -333,6 +338,7 @@ function showDetails(id) {
     }
 };
 
+    // Obtiene los datos del producto según el ID
 const data = detailsMap[id];
 
     title.textContent = data.title;
@@ -350,6 +356,7 @@ const data = detailsMap[id];
     modal.style.display = 'flex';
 }
 
+// Cerrar modal de detalles
 function closeDetails() {
     document.getElementById('details-modal').style.display = 'none';
 }
@@ -387,20 +394,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Cierra el menú al hacer clic en un link (móvil)
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        document.querySelector('.nav-links').classList.remove('nav-active');
-        document.querySelector('.burger').classList.remove('toggle');
+const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    toggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
     });
-});
-
-window.addEventListener("orientationchange", function () {
-    const nav = document.querySelector(".nav-links");
-    const burger = document.querySelector(".burger");
-
-    if (nav.classList.contains("nav-active")) {
-        nav.classList.remove("nav-active");
-        burger.classList.remove("toggle");
-    }
-});
