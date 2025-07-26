@@ -53,10 +53,15 @@ nav {
 }
 
 .nav-links {
-    display: flex;
+    display: none;
     justify-content: space-around;
     list-style: none;
     width: 40%;
+}
+
+.nav-links.nav-active {
+    display: flex;
+    flex-direction: column;
 }
 
 .nav-links a {
@@ -615,7 +620,7 @@ footer {
     .nav-links.nav-active {
         display: flex;
         flex-direction: column;
-}
+    }
 
     .nav-links li {
         width: 100%;
